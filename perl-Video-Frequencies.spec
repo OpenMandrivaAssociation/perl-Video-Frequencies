@@ -1,5 +1,5 @@
 %define version	0.03
-%define release	%mkrel 6
+%define release	%mkrel 8
 %define module	Video-Frequencies
 
 Name:		perl-%{module}
