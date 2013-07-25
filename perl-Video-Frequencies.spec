@@ -5,11 +5,11 @@
 Name:		perl-%{module}
 Summary:	Perl interface to the Video4linux tuner frequencies
 Group:		Development/Perl
-Version:	%{version}
-Release:       	%{release}
+Version:	%perl_convert_version 0.03
+Release:       	1
 License:	GPL or Artistic
 URL:		http://ivtvdriver.org/
-Source0:	http://dl.ivtvdriver.org/supporting-tools/%{module}-%{version}.tar.bz2
+Source0:	http://dl.ivtvdriver.org/supporting-tools/Video-Frequencies-0.03.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-root
 BuildArch:	noarch
 #Requires: perl, perl-base
@@ -84,4 +84,5 @@ rm -rf %{buildroot}
 
 * Fri Jun 25 2004 Stefan van der Eijk <stefan@mandrake.org> 0.03-4mdk
 - initial Mandrake package
+
 
