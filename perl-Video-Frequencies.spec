@@ -1,16 +1,14 @@
-%define version	0.03
-%define release	%mkrel 11
+%define upstream_version 0.03
 %define module	Video-Frequencies
 
 Name:		perl-%{module}
 Summary:	Perl interface to the Video4linux tuner frequencies
 Group:		Development/Perl
-Version:	%perl_convert_version 0.03
+Version:	%perl_convert_version %{upstream_version}
 Release:       	1
 License:	GPL or Artistic
 URL:		http://ivtvdriver.org/
-Source0:	http://dl.ivtvdriver.org/supporting-tools/Video-Frequencies-0.03.tar.gz
-BuildRoot:	%{_tmppath}/%{name}-root
+Source0:	http://dl.ivtvdriver.org/supporting-tools/Video-Frequencies-%{upstream_version}.tar.gz
 BuildArch:	noarch
 #Requires: perl, perl-base
 BuildRequires:	perl-devel
@@ -22,7 +20,7 @@ frequency mappings that are used by Video4Linux programs.
 Do perldoc Video::Frequencies to get complete instructions, etc.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{module}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -30,14 +28,9 @@ Do perldoc Video::Frequencies to get complete instructions, etc.
 make test
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 %{makeinstall_std}
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root,-)
 %doc README COPYING Changes
 %{perl_vendorlib}/Video/Frequencies.pm
 %{_mandir}/man3/Video::Frequencies.3pm*
@@ -84,5 +77,6 @@ rm -rf %{buildroot}
 
 * Fri Jun 25 2004 Stefan van der Eijk <stefan@mandrake.org> 0.03-4mdk
 - initial Mandrake package
+
 
 
