@@ -5,7 +5,7 @@ Name:		perl-%{module}
 Summary:	Perl interface to the Video4linux tuner frequencies
 Group:		Development/Perl
 Version:	%perl_convert_version %{upstream_version}
-Release:       	12
+Release:       	13
 License:	GPL or Artistic
 URL:		http://ivtvdriver.org/
 Source0:	http://dl.ivtvdriver.org/supporting-tools/Video-Frequencies-%{upstream_version}.tar.gz
