@@ -11,6 +11,7 @@ URL:		https://ivtvdriver.org/
 Source0:	http://dl.ivtvdriver.org/supporting-tools/Video-Frequencies-%{upstream_version}.tar.gz
 BuildArch:	noarch
 #Requires: perl, perl-base
+BuildRequires:	make
 BuildRequires:	perl-devel
 
 %description
