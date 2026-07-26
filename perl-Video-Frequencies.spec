@@ -1,14 +1,13 @@
-%define upstream_version	0.03
 %define module	Video-Frequencies
 
 Name:		perl-%{module}
 Summary:	Perl interface to the Video4linux tuner frequencies
 Group:		Development/Perl
-Version:	%perl_convert_version %{upstream_version}
-Release:       	14
+Version:	0.03
+Release:       	15
 License:	GPL or Artistic
 URL:		https://ivtvdriver.org/
-Source0:	http://dl.ivtvdriver.org/supporting-tools/Video-Frequencies-%{upstream_version}.tar.gz
+Source0:	http://dl.ivtvdriver.org/supporting-tools/Video-Frequencies-%{version}.tar.gz
 BuildArch:	noarch
 #Requires: perl, perl-base
 BuildRequires:	make
@@ -21,7 +20,7 @@ frequency mappings that are used by Video4Linux programs.
 Do perldoc Video::Frequencies to get complete instructions, etc.
 
 %prep
-%setup -q -n %{module}-%{upstream_version}
+%setup -q -n %{module}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
